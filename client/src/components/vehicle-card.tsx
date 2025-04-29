@@ -1,6 +1,6 @@
 export function VehicleCard() {
    return (
-      <div className='h-fit w-full max-w-64 rounded-2xl border-2 border-indigo-400 bg-gradient-to-b from-black/70 to-indigo-800 p-4 text-white transition-all duration-500 hover:shadow-[0_0_20px_5px_rgba(99,102,241,0.8)]'>
+      <div className='h-fit w-full max-w-64 rounded-2xl border-2 border-indigo-400 bg-gradient-to-b from-black/70 to-indigo-800 p-4 text-white transition-all duration-500 hover:shadow-[0_0_15px_3px_rgba(99,102,241,0.5)]'>
          <div>
             <div>
                <div className='mb-4 w-fit rounded-xl border-2 px-4 py-2 text-sm font-black'>
