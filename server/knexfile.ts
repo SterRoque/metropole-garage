@@ -4,7 +4,7 @@ import { env } from "./src/env/index.ts";
 export const config: { [key: string]: Knex.Config } = {
   development: {
     client: "mysql2",
-    connection: env.DATABASE_URL,
+    connection: env?.DATABASE_URL,
     migrations: {
       directory: "./db/migrations",
     },
