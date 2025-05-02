@@ -10,7 +10,7 @@ export async function seed(knex: Knex): Promise<void> {
   await knex("players").insert({
     id: playerId,
     name: "Ster_Roque",
-    steam_id: "steam:110000164a15e27",
+    steam_id: "steam:your_steam_id",
     created_at: new Date(),
   });
 
