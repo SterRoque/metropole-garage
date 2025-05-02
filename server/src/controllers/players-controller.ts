@@ -1,8 +1,8 @@
-import { playerService } from "@services/player-service";
+import { playersService } from "@services/players-service";
 import { getPlayerSteamId } from "@utils/get-player-steam-id";
 import { createPlayerSchema } from "@schemas/player-schema";
 
-class PlayerController {
+class PlayersController {
   async register(
     playerName: string,
     _: unknown,
@@ -20,7 +20,7 @@ class PlayerController {
         steam_id: playerSteamId,
       });
 
-      await playerService.register(playerData);
+      await playersService.register(playerData);
 
       deferrals.done();
       return;
@@ -29,4 +29,4 @@ class PlayerController {
   }
 }
 
-export const playerController = new PlayerController();
+export const playersController = new PlayersController();

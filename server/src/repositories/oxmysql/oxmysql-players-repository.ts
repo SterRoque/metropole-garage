@@ -2,8 +2,8 @@ import { IPlayer } from "@models/player-model";
 import { IPlayersRepository } from "@repositories/players-repository";
 import { TCreatePlayerSchema } from "schemas/player-schema";
 
-class OxmysqlPlayerRepository implements IPlayersRepository {
-  async getPlayerBySteamId(steam_id: string): Promise<IPlayer | null> {
+class OxmysqlPlayersRepository implements IPlayersRepository {
+  async getPlayerBySteamId(steam_id: string) {
     const result: IPlayer[] = await exports.oxmysql.query_async(
       "SELECT * FROM players WHERE steam_id = ?",
       [steam_id]
@@ -16,7 +16,7 @@ class OxmysqlPlayerRepository implements IPlayersRepository {
     return result[0];
   }
 
-  async createPlayer(data: TCreatePlayerSchema): Promise<void> {
+  async createPlayer(data: TCreatePlayerSchema) {
     await exports.oxmysql.insert(
       "INSERT INTO players (name, steam_id) VALUES (?, ?)",
       [data.name, data.steam_id]
@@ -24,4 +24,4 @@ class OxmysqlPlayerRepository implements IPlayersRepository {
   }
 }
 
-export const playerRepository = new OxmysqlPlayerRepository();
+export const playerRepository = new OxmysqlPlayersRepository();

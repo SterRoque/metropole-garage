@@ -1,7 +1,7 @@
-import { playerRepository } from "@repositories/oxmysql/oxmysql-player-repository";
+import { playerRepository } from "@repositories/oxmysql/oxmysql-players-repository";
 import { TCreatePlayerSchema } from "schemas/player-schema";
 
-class PlayerService {
+class PlayersService {
   async register(data: TCreatePlayerSchema): Promise<void> {
     const playerExists = await playerRepository.getPlayerBySteamId(
       data.steam_id
@@ -13,4 +13,4 @@ class PlayerService {
   }
 }
 
-export const playerService = new PlayerService();
+export const playersService = new PlayersService();
