@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "seed": "tsx db/seeds/run_seeds.ts"
   },
   "keywords": [],
   "author": "Ster Roque",
@@ -14,6 +15,8 @@
     "@citizenfx/server": "latest",
     "@types/node": "^22.15.3",
     "esbuild": "^0.25.3",
+    "esbuild-plugin-alias": "^0.2.1",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {
