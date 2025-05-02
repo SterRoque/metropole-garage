@@ -1,1 +1,24 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+   --color-background: rgba(13, 13, 14, 0.9);
+   --color-green: #bedf1e;
+   /* --color-green-secondary: #89a600; */
+
+   --color-green-tertiary: #afce1c;
+   --color-green-shadow: rgba(190, 223, 30, 0.5);
+
+   --color-black: #000;
+
+   --shadow-green: 0 0 15px 3px rgba(190, 223, 30, 0.5);
+}
+
+@layer utilities {
+   .hover\:background-card:hover {
+      background: linear-gradient(
+         to bottom,
+         rgba(0, 0, 0, 0.4),
+         rgba(137, 166, 0, 1)
+      );
+   }
+}
