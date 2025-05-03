@@ -138,7 +138,7 @@ A interface gráfica que aparece para o jogador quando ele interage com a garage
 O sistema de garagem inclui alguns comandos que podem ser utilizados tanto pelos administradores quanto pelos jogadores, para facilitar a interação com o sistema de veículos.
 
 ### Comandos para Administradores:
-5. Antes de tudo, configure seu server.cfg da seguinte maneira:
+ Antes de tudo, configure seu server.cfg da seguinte maneira:
 ```cfg
    add_ace group.admin metropole.admin allow
    add_principal identifier.sua_steam_id group.admin
