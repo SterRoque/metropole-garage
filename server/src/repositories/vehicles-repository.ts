@@ -1,6 +1,6 @@
-import { IVehicle } from "@models/vehicle-model";
+import { IVehicle, IVehicleWithCustomization } from "@models/vehicle-model";
 
 export interface IVehiclesRepository {
   listBySteamId(steam_id: string): Promise<IVehicle[]>;
-  getByPlate(plate: string): Promise<IVehicle | null>;
+  getByPlate(plate: string): Promise<IVehicleWithCustomization | null>;
 }
